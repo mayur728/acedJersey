@@ -15,7 +15,9 @@ public class CommentResource {
     private CommentService commentService = new CommentService();
     @GET
     public List<Comment> getAllComments(@PathParam("messageId") long messageId){
+        System.out.println("test");
         return commentService.getAllComments(messageId);
+
     }
     @POST
     public Comment addMessage(@PathParam("messageId") long messageId, Comment comment){
